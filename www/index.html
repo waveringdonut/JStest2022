@@ -1,5 +1,6 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -15,34 +16,32 @@
         });
 
         function main() {
-            var msg = "Hello, JavaScript!";
-            msg += "<br>";
-            msg += "This is monaca";
-
-            $("#disp1").html(msg);
-            $("#disp1").css("font-size","x-large");
-            $("#disp1").css("font-family","fantasy");
-            $("#disp1").css("background-color","lightgray");
-
-            var a = 0;
-            var txt = "";
-            
-            if (a==1) {
-                txt += "TRUE<br>"
-            } else {
-                txt += "FALSE<br>"
+            var a = new Array(3);
+            a[0] = 10;
+            a[1] = 50;
+            a[2] = 30;
+            var msg = "";
+            for (let i = 0; i < a.length; i++) {
+                msg += i + ":" +
+                    a[i] + "<br>";
             }
-            txt += "a: " + a + "<br>";
-            $("#disp2").html(txt);
+            $("#disp1").html(msg);
 
-
-
+            var a = [100, 20, -5];
+            var msg = "";
+            for (let i = 0; i < a.length; i++) {
+                msg += i + ":" +
+                    a[i] + "<br>";
+            }
+            $("#disp2").html(msg);
         }
     </script>
 </head>
+
 <body>
     <div id="disp1" class="out">DISPLAY 1</div>
     <div id="disp2" class="out">DISPLAY 2</div>
     <button id="btn">Run</button>
 </body>
+
 </html>
